@@ -2,26 +2,46 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
 
-## Development server
+## Weather Report Component for Angular
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+An Angular standalone component that displays hourly and daily average weather data using the Open-Meteo and OpenCageData APIs. It automatically detects the user's location (via the browser's geolocation) and renders beautiful weather tables with icons.
 
-## Code scaffolding
+## 📦 Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+npm i angular-npm-weather
 
-## Build
+## 🛠 Usage
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Import and use the WeatherReportComponent in any standalone Angular app or module:
 
-## Running unit tests
+```typescript
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+import { WeatherReportComponent } from 'weather-library';
 
-## Running end-to-end tests
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [WeatherReportComponent],
+  template: `<lib-weather-info />`
+})
+export class AppComponent {}
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+The component uses browser geolocation to fetch weather data. Ensure location permissions are enabled in the browser.
 
-## Further help
+## 🌐 Features
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+ 🛰 Auto-location via browser GPS
+
+ 🌡 Hourly temperature report
+
+ 📅 Daily average temperature breakdown with icons
+
+ 📍 Location display using OpenCageData API
+ 
+ 📊 Responsive and styled HTML tables
+
+ ## 📸 Screenshot
+
+ ![alt text](image.png)
+
+ ![alt text](image-1.png)
